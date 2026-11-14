@@ -1,4 +1,14 @@
 
+:root {
+  --dark: #10251f;
+  --dark-soft: #19372e;
+  --gold: #c9a45c;
+  --gold-light: #e6cb91;
+  --cream: #f7f5ef;
+  --text: #27342f;
+  --muted: #69756e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +17,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 85px;
 }
 
 body {
   font-family: "Vazirmatn", sans-serif;
-  background: #f7f6f1;
-  color: #292e29;
+  background: var(--cream);
+  color: var(--text);
   line-height: 2;
 }
 
@@ -22,49 +32,57 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .container {
-  width: min(1120px, 92%);
+  width: min(1120px, 90%);
   margin: auto;
 }
 
 /* Header */
-
 .header {
+  background: rgba(16, 37, 31, 0.97);
+  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #142b22;
-  box-shadow: 0 5px 25px #0002;
+  box-shadow: 0 5px 25px rgba(0,0,0,.12);
 }
 
-.navbar {
-  min-height: 78px;
+.nav-container {
+  min-height: 76px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .logo {
   font-size: 25px;
   font-weight: 800;
-  color: #d6b878;
+  color: white;
 }
 
-.nav-links {
+.logo span {
+  color: var(--gold-light);
+}
+
+.nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 28px;
 }
 
-.nav-links a {
-  color: #eee;
+.nav a {
   font-size: 14px;
+  color: #eee;
   transition: .3s;
 }
 
-.nav-links a:hover {
-  color: #d6b878;
+.nav a:hover {
+  color: var(--gold-light);
 }
 
 .menu-toggle {
@@ -72,7 +90,6 @@ a {
   border: 0;
   background: transparent;
   cursor: pointer;
-  padding: 8px;
 }
 
 .menu-toggle span {
@@ -80,79 +97,83 @@ a {
   width: 26px;
   height: 2px;
   background: white;
-  margin: 6px 0;
+  margin: 6px;
+  border-radius: 5px;
 }
 
 /* Hero */
-
 .hero {
-  min-height: 560px;
+  min-height: 650px;
   position: relative;
   display: flex;
   align-items: center;
-  text-align: center;
   color: white;
   background:
-    url("images/haji-darvish-1.jpg")
-    center 35% / cover no-repeat,
-    #173a2b;
+    linear-gradient(90deg, rgba(8,22,17,.35), rgba(8,22,17,.92)),
+    url("images/haji-darvish-1.jpg") center 35% / cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    #0b2019ed,
-    #102b20bb
-  );
+  background: linear-gradient(0deg, rgba(8,22,17,.55), transparent 70%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 90px 0;
+  padding-top: 30px;
 }
 
-.eyebrow {
-  color: #e2c58e;
-  letter-spacing: 2px;
+.hero-label,
+.section-heading span,
+.heritage-content > span {
+  color: var(--gold-light);
   font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 6vw, 65px);
+  font-size: clamp(48px, 8vw, 86px);
+  line-height: 1.3;
+  margin: 15px 0;
   font-weight: 800;
-  margin: 18px 0;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: auto;
+  max-width: 590px;
   color: #eee;
   font-size: 17px;
+  margin-bottom: 30px;
 }
 
-.main-button {
+.main-btn {
   display: inline-block;
-  background: #c6a66c;
-  color: #17291f;
-  padding: 12px 30px;
-  border-radius: 7px;
-  margin-top: 30px;
+  padding: 12px 27px;
+  background: var(--gold);
+  color: var(--dark);
+  border-radius: 6px;
   font-weight: 700;
   transition: .3s;
 }
 
-.main-button:hover {
-  background: white;
+.main-btn:hover {
+  background: var(--gold-light);
   transform: translateY(-4px);
 }
 
-/* General sections */
+.hero-bottom {
+  position: absolute;
+  bottom: 22px;
+  left: 5%;
+  color: #eee;
+  font-size: 13px;
+}
 
+/* General sections */
 .section {
-  padding: 85px 0;
+  padding: 95px 0;
 }
 
 .section-heading {
@@ -161,41 +182,59 @@ a {
 }
 
 .section-heading span {
-  color: #a17e42;
-  font-size: 14px;
-  font-weight: 700;
+  color: #9a7739;
 }
 
 .section-heading h2 {
-  font-size: 32px;
-  color: #193a2c;
-  margin-top: 5px;
+  color: var(--dark);
+  font-size: clamp(25px, 4vw, 36px);
+  margin-top: 8px;
+}
+
+.heading-line {
+  width: 65px;
+  height: 3px;
+  background: var(--gold);
+  margin: 17px auto;
+  border-radius: 5px;
 }
 
 .section-heading p {
-  color: #777;
+  color: var(--muted);
   font-size: 14px;
 }
 
-.gold-line {
-  width: 65px;
-  height: 3px;
-  background: #c6a66c;
-  margin: 17px auto;
+/* About */
+.about-section {
+  background: white;
 }
 
-.intro-box {
+.about-card {
   max-width: 850px;
   margin: auto;
-  text-align: center;
-  color: #555;
-  font-size: 16px;
+  padding: 38px;
+  border: 1px solid #e9e2d4;
+  border-radius: 15px;
+  background: #fffefa;
+  box-shadow: 0 15px 45px rgba(25, 55, 46, .06);
 }
 
-/* Genealogy */
+.about-card p {
+  color: #536159;
+  margin: 12px 0;
+  text-align: justify;
+}
 
-.genealogy-section {
-  background: #eeede6;
+.about-symbol {
+  color: var(--gold);
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Family tree */
+.tree-section {
+  background: #f0eee6;
 }
 
 .tree {
@@ -206,128 +245,123 @@ a {
 
 .tree-root {
   display: inline-block;
-  min-width: 180px;
-  padding: 15px 35px;
+  min-width: 190px;
+  padding: 18px 35px;
+  background: var(--dark);
   color: white;
-  background: #173a2b;
-  border-bottom: 4px solid #c6a66c;
-  border-radius: 9px;
-  font-size: 24px;
-  font-weight: 800;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(16,37,31,.15);
+}
+
+.tree-root span {
+  color: var(--gold-light);
+  font-size: 12px;
+}
+
+.tree-root h3 {
+  font-size: 26px;
 }
 
 .tree-connector {
   width: 2px;
-  height: 30px;
-  background: #c6a66c;
+  height: 35px;
+  background: var(--gold);
   margin: auto;
 }
 
-.tree-caption {
-  color: #777;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.children-grid {
+.tree-children {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  position: relative;
 }
 
-.child-card {
+.tree-person {
   background: white;
-  padding: 20px 10px;
+  padding: 18px 10px;
+  border: 1px solid #e3d5b6;
   border-radius: 9px;
-  border: 1px solid #e7e0d1;
-  color: #214332;
+  color: var(--dark);
   font-weight: 700;
   transition: .3s;
 }
 
-.child-card:hover {
+.tree-person:hover {
+  background: var(--dark);
+  color: white;
   transform: translateY(-5px);
-  border-color: #c6a66c;
-  box-shadow: 0 10px 25px #0000000d;
+  border-color: var(--gold);
 }
 
 /* Timeline */
+.leadership-section {
+  background: white;
+}
 
 .timeline {
-  max-width: 760px;
+  max-width: 750px;
   margin: auto;
-  border-right: 3px solid #c6a66c;
+  border-right: 2px solid #dfc58f;
   padding-right: 28px;
 }
 
 .timeline-item {
   display: flex;
-  gap: 17px;
   align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 25px;
   position: relative;
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 9px;
-  box-shadow: 0 5px 20px #00000008;
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
-  right: -38px;
-  top: 26px;
+  right: -36px;
+  top: 12px;
   width: 14px;
   height: 14px;
-  background: #c6a66c;
-  border: 3px solid #f7f6f1;
+  background: var(--gold);
+  border: 3px solid white;
   border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--gold);
 }
 
 .timeline-number {
   min-width: 34px;
   height: 34px;
-  background: #173a2b;
-  color: white;
-  border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 13px;
+  background: var(--dark);
+  color: var(--gold-light);
+  border-radius: 50%;
+  font-weight: 700;
 }
 
 .timeline-item h3 {
-  color: #193a2c;
+  color: var(--dark);
+  font-size: 18px;
 }
 
 .timeline-item p {
+  color: var(--muted);
   font-size: 14px;
-  color: #777;
 }
 
 /* Elders */
-
-.elders-section {
-  background: #eeede6;
+.elder-section {
+  background: #f5f3ec;
 }
 
 .elder-card {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 1fr 1.15fr;
   gap: 35px;
   align-items: center;
   background: white;
-  border-radius: 15px;
   padding: 25px;
-  margin-bottom: 35px;
-  box-shadow: 0 12px 35px #0000000a;
-}
-
-.elder-reverse {
-  grid-template-columns: 1fr 360px;
-}
-
-.elder-reverse .elder-gallery {
-  order: 2;
+  border-radius: 17px;
+  box-shadow: 0 15px 50px rgba(16,37,31,.07);
 }
 
 .elder-gallery {
@@ -338,211 +372,217 @@ a {
 
 .elder-gallery img {
   width: 100%;
-  height: 310px;
+  height: 330px;
   object-fit: cover;
-  background: #e7e4da;
-  border-radius: 10px;
+  border-radius: 11px;
+  background: #e9e5d9;
+  transition: .4s;
 }
 
-.single-photo {
-  grid-template-columns: 1fr;
+.elder-gallery img:hover {
+  transform: scale(1.025);
 }
 
-.single-photo img {
-  height: 380px;
+.elder-info {
+  padding: 15px;
 }
 
-.elder-label {
-  color: #a17e42;
+.elder-tag {
+  color: #9a7739;
   font-size: 13px;
   font-weight: 700;
 }
 
-.elder-content h3 {
-  color: #173a2b;
+.elder-info h3 {
+  color: var(--dark);
   font-size: 30px;
-  margin: 5px 0 0;
+  margin: 8px 0 15px;
 }
 
-.elder-content h4 {
-  color: #a17e42;
-  font-size: 16px;
-  margin-bottom: 18px;
+.elder-info p {
+  color: #59665f;
+  text-align: justify;
+  font-size: 14px;
+  margin: 12px 0;
 }
 
-.elder-content p {
-  color: #555;
-  font-size: 15px;
-  margin-bottom: 12px;
-}
-
-.elder-content blockquote {
-  background: #173a2b;
-  color: #f3e5c6;
-  border-right: 4px solid #c6a66c;
-  padding: 17px;
-  border-radius: 8px;
-  margin: 20px 0;
+.elder-info blockquote {
+  margin-top: 22px;
+  padding: 15px 18px;
+  background: #f7f2e6;
+  border-right: 3px solid var(--gold);
+  color: #725a2d;
   font-weight: 600;
 }
 
-.elder-content .prayer {
-  color: #a17e42;
-  font-weight: 700;
-  margin-top: 15px;
+.memorial {
+  margin-top: 18px;
+  color: #9a7739;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.rahim-section {
+  background: white;
+}
+
+.single-image {
+  grid-template-columns: 1fr;
+}
+
+.single-image img {
+  height: 430px;
 }
 
 /* Heritage */
-
 .heritage-section {
-  background: #173a2b;
+  padding: 90px 0;
+  background:
+    linear-gradient(rgba(12,34,27,.92), rgba(12,34,27,.95)),
+    url("images/haji-darvish-2.jpg") center / cover no-repeat;
   color: white;
   text-align: center;
 }
 
-.light-heading h2 {
-  color: #e2c58e;
+.heritage-content h2 {
+  font-size: clamp(24px, 4vw, 37px);
+  margin: 12px 0;
 }
 
-.heritage-text {
-  max-width: 800px;
+.heritage-content p {
+  color: #d9e0da;
+  max-width: 680px;
   margin: auto;
-  color: #e5e5e5;
-  font-size: 16px;
-}
-
-.heritage-quote {
-  max-width: 700px;
-  margin: 30px auto 0;
-  padding: 22px;
-  border: 1px solid #c6a66c80;
-  background: #ffffff0d;
-  border-radius: 10px;
-  color: #f0d8a7;
 }
 
 /* Footer */
-
-footer {
-  background: #10231b;
-  color: #ccc;
+.footer {
+  padding: 35px 0;
   text-align: center;
-  padding: 35px 15px;
+  background: #091a15;
+  color: #dce3dd;
 }
 
-footer h3 {
-  color: #d7b879;
-  margin-bottom: 8px;
+.footer-logo {
+  color: var(--gold-light);
+  font-size: 24px;
+  font-weight: 800;
 }
 
-footer p {
-  font-size: 13px;
+.footer p {
+  font-size: 14px;
+  margin: 7px 0;
 }
 
-.copyright {
-  margin-top: 12px;
-  color: #999;
+.footer span {
+  color: #9eaaa2;
+  font-size: 12px;
 }
 
-/* Responsive */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 43px;
+  height: 43px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+  z-index: 900;
+}
 
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile */
 @media (max-width: 800px) {
   .menu-toggle {
     display: block;
   }
 
-  .navbar {
-    flex-wrap: wrap;
-    padding: 12px 0;
-  }
-
-  .nav-links {
+  .nav {
     display: none;
-    width: 100%;
+    position: absolute;
+    top: 76px;
+    right: 0;
+    left: 0;
+    padding: 20px 5%;
+    background: var(--dark);
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
-    padding: 8px 0;
+    gap: 12px;
   }
 
-  .nav-links.open {
+  .nav.open {
     display: flex;
   }
 
-  .nav-links a {
-    padding: 10px;
-    border-top: 1px solid #ffffff15;
+  .nav a {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
   }
 
   .hero {
-    min-height: 450px;
-  }
-
-  .section {
-    padding: 60px 0;
-  }
-
-  .section-heading h2 {
-    font-size: 26px;
-  }
-
-  .elder-card,
-  .elder-reverse {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .elder-reverse .elder-gallery {
-    order: 0;
-  }
-
-  .elder-gallery img {
-    height: 250px;
-  }
-
-  .single-photo img {
-    height: 330px;
-  }
-}
-
-@media (max-width: 520px) {
-  .children-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h1 {
-    font-size: 38px;
+    min-height: 570px;
+    background-position: center;
   }
 
   .hero p {
     font-size: 15px;
   }
 
-  .elder-card {
-    padding: 15px;
+  .section {
+    padding: 70px 0;
   }
 
-  .elder-gallery {
-    gap: 8px;
+  .tree-children {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .elder-card {
+    grid-template-columns: 1fr;
   }
 
   .elder-gallery img {
-    height: 190px;
+    height: 260px;
   }
 
-  .single-photo img {
-    height: 280px;
+  .single-image img {
+    height: 350px;
   }
 
-  .elder-content h3 {
-    font-size: 25px;
+  .about-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    min-height: 500px;
   }
 
-  .timeline {
-    padding-right: 20px;
+  .elder-gallery {
+    grid-template-columns: 1fr;
   }
 
-  .timeline-item::before {
-    right: -30px;
+  .elder-gallery img {
+    height: 300px;
+  }
+
+  .tree-children {
+    gap: 9px;
+  }
+
+  .tree-person {
+    padding: 13px 5px;
+    font-size: 14px;
   }
 }
