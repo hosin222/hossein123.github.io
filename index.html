@@ -1,135 +1,258 @@
-!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="معرفی طایفه بیت ارویض و خاندان درستانی">
-  <title>خاندان درستانی | بیت ارویض</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="تاریخچه، شجره‌نامه و بزرگان طایفه بیت ارویض">
+  <title>بیت ارویض | تاریخ و شجره‌نامه</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="#home">
-      <span class="logo">ب</span>
-      <span>خاندان درستانی<small>روایت بیت ارویض</small></span>
-    </a>
-    <button class="menu-btn" aria-label="باز کردن منو">☰</button>
-    <nav class="menu">
-      <a href="#home">خانه</a>
-      <a href="#about">درباره طایفه</a>
-      <a href="#family">هفت فرزند ارویض</a>
-      <a href="#history">بزرگان خاندان</a>
-    </nav>
-  </div>
-</header>
+  <header class="header">
+    <div class="container nav-container">
+      <a class="logo" href="#home">بیت <span>ارویض</span></a>
 
-<main>
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <span class="eyebrow">ریشه‌ها، هویت و افتخار نسل‌ها</span>
-      <h1>بیت ارویض</h1>
-      <p>روایتی از ریشه‌های خانوادگی، بزرگان و پیوند نسل‌هایی که نام نیاکان خود را زنده نگه داشته‌اند.</p>
-      <a href="#about" class="btn">آشنایی با خاندان <span>←</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#about">درباره طایفه</a>
+        <a href="#family-tree">شجره‌نامه</a>
+        <a href="#leaders">بزرگان</a>
+        <a href="#heritage">میراث ما</a>
+      </nav>
     </div>
-    <div class="hero-footer">
-      <span>خاندان درستانی</span>
-      <span>از گذشته تا امروز</span>
-    </div>
-  </section>
+  </header>
 
-  <section class="section about" id="about">
-    <div class="container about-grid">
-      <div>
-        <span class="gold-label">درباره طایفه</span>
-        <h2>حفظ یاد و روایت نیاکان</h2>
-        <p>این وب‌سایت با هدف معرفی و ثبت روایت‌های خانوادگی طایفه «بیت ارویض» ساخته شده است؛ روایتی برای شناخت ریشه‌ها، احترام به بزرگان و انتقال یادگارهای گذشته به نسل‌های آینده.</p>
-        <p>اطلاعات این صفحه بر اساس روایت‌های خانوادگی گردآوری شده و با دریافت اسناد و اطلاعات تکمیلی می‌توان آن را گسترش داد.</p>
-      </div>
-      <div class="quote">
-        <span>“</span>
-        <h3>شناخت ریشه‌ها، چراغ راه آینده است.</h3>
-        <small>یادگار نیاکان، سرمایه نسل‌ها</small>
-      </div>
-    </div>
-  </section>
+  <main>
 
-  <section class="section family" id="family">
-    <div class="container">
-      <div class="section-title">
-        <span class="gold-label">ریشه‌های خانوادگی</span>
-        <h2>هفت فرزند ارویض</h2>
-        <p>بر اساس روایت خانوادگی، ارویض هفت پسر داشته است.</p>
+    <!-- بخش اصلی -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-label">ریشه‌ها، هویت و افتخار</span>
+        <h1>بیت ارویض</h1>
+        <p>
+          روایت تاریخ، شجره‌نامه و یاد بزرگان؛
+          برای پاسداشت ریشه‌هایی که نسل به نسل به ما رسیده‌اند.
+        </p>
+        <a href="#about" class="main-btn">آشنایی با تاریخ طایفه</a>
       </div>
+      <div class="hero-bottom">اصالت ما، میراث نسل‌های ماست</div>
+    </section>
 
-      <div class="tree">
-        <span class="tree-caption">جد خاندان</span>
-        <div class="ancestor">ارویض</div>
-        <div class="tree-line"></div>
-        <div class="sons">
-          <div>سویف</div>
-          <div>زویف</div>
-          <div>طریف</div>
-          <div>غافل</div>
-          <div>زیتان</div>
-          <div>فیل</div>
-          <div>حسین</div>
+    <!-- معرفی طایفه -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span>درباره ما</span>
+          <h2>تاریخ و هویت بیت ارویض</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-symbol">✦</div>
+          <p>
+            بیت ارویض نام طایفه‌ای است که ریشه‌ها و پیشینه آن با نام
+            ارویض شناخته می‌شود. تاریخ این خاندان، روایت پیوند نسل‌ها،
+            بزرگان و کسانی است که برای خانواده و طایفه خود تلاش کردند.
+          </p>
+          <p>
+            هدف این مجموعه، ثبت و نگهداری شجره‌نامه، یاد بزرگان و
+            روایت‌هایی است که از نسل‌های گذشته به ما رسیده‌اند؛
+            تا فرزندان امروز و نسل‌های آینده با پیشینه خانوادگی خود آشنا باشند.
+          </p>
         </div>
       </div>
-      <p class="note">این تبارنامه بر پایه روایت خانوادگی تنظیم شده و امکان تکمیل شاخه‌های نسل‌های بعدی وجود دارد.</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="section history" id="history">
-    <div class="container">
-      <div class="section-title">
-        <span class="gold-label">تاریخ خانوادگی</span>
-        <h2>بزرگان و زنجیره رهبری</h2>
-        <p>نام‌هایی که در روایت خاندان از آن‌ها یاد شده است.</p>
-      </div>
+    <!-- شجره نامه -->
+    <section class="section tree-section" id="family-tree">
+      <div class="container">
+        <div class="section-heading">
+          <span>ریشه‌های خاندان</span>
+          <h2>شجره‌نامه بیت ارویض</h2>
+          <div class="heading-line"></div>
+          <p>فرزندان ارویض در روایت خانوادگی</p>
+        </div>
 
-      <div class="leaders">
-        <div class="leader"><b>غافل</b><small>پس از ارویض</small></div>
-        <span>←</span>
-        <div class="leader"><b>طریف</b><small>پس از غافل</small></div>
-        <span>←</span>
-        <div class="leader"><b>عبدول</b><small>پس از طریف</small></div>
-        <span>←</span>
-        <div class="leader"><b>حاجی درویش</b><small>فرزند عبدول</small></div>
-      </div>
+        <div class="tree">
+          <div class="tree-root">
+            <span>بنیان خاندان</span>
+            <h3>ارویض</h3>
+          </div>
 
-      <div class="story">
-        <span class="star">✦</span>
-        <div>
-          <h3>دوران حاجی درویش</h3>
-          <p>در روایت نقل‌شده، در دوران حاجی درویش جمعیت خاندان حدود دو هزار نفر و نزدیک به سه هزار نفر توصیف شده است. همچنین از یازده فرزند او و سه برادرش، حاج رحیم، ناعور و کریم، یاد شده است.</p>
-          <small>این اطلاعات بر پایه روایت خانوادگی است و با اسناد و گفته‌های تکمیلی قابل اصلاح خواهد بود.</small>
+          <div class="tree-connector"></div>
+
+          <div class="tree-children">
+            <div class="tree-person">سویف</div>
+            <div class="tree-person">ضویف</div>
+            <div class="tree-person">طریف</div>
+            <div class="tree-person">غافل</div>
+            <div class="tree-person">زیتان</div>
+            <div class="tree-person">ایفیل</div>
+            <div class="tree-person">احسیچر</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="closing">
+    <!-- مسیر رهبری -->
+    <section class="section leadership-section">
+      <div class="container">
+        <div class="section-heading">
+          <span>روایت نسل‌ها</span>
+          <h2>توالی بزرگان و ریش‌سفیدان</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-number">۱</span>
+            <div><h3>ارویض</h3><p>ریشه و نیای خاندان در روایت شجره‌نامه.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-number">۲</span>
+            <div><h3>غافل</h3><p>پس از ارویض، جایگاه سرپرستی به غافل رسید.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-number">۳</span>
+            <div><h3>طریف</h3><p>پس از غافل، طریف عهده‌دار این جایگاه شد.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-number">۴</span>
+            <div><h3>عفدول</h3><p>پس از طریف، این جایگاه به عفدول رسید.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-number">۵</span>
+            <div><h3>حاجی درویش</h3><p>پس از عفدول، فرزند او حاجی درویش این مسیر را ادامه داد.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-number">۶</span>
+            <div><h3>حاج رحیم</h3><p>پس از درگذشت حاجی درویش، برادرش حاج رحیم راه او را ادامه داد.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- حاجی درویش -->
+    <section class="section elder-section" id="leaders">
+      <div class="container">
+        <div class="section-heading">
+          <span>یاد بزرگان</span>
+          <h2>حاجی درویش</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <article class="elder-card">
+          <div class="elder-gallery">
+            <img src="images/haji-darvish-1.jpg" alt="تصویر حاجی درویش">
+            <img src="images/haji-darvish-2.jpg" alt="تصویر دوم حاجی درویش">
+          </div>
+
+          <div class="elder-info">
+            <span class="elder-tag">از بزرگان بیت ارویض</span>
+            <h3>حاجی درویش</h3>
+            <p>
+              حاجی درویش از شخصیت‌های شناخته‌شده در روایت خانوادگی بیت ارویض بود.
+              او در برابر دشواری‌ها ایستادگی می‌کرد، فردی قوی و استوار بود
+              و برای اعضای خانواده و طایفه خود تلاش فراوان داشت.
+            </p>
+            <p>
+              او برای خانواده و همچنین زرگان زحمت کشید و نسبت به شیوخ وفادار بود؛
+              شیوخ نیز احترام زیادی برای او قائل بودند.
+            </p>
+            <p>
+              حاجی درویش دارای ۹ فرزند بود و از نسل فرزندان او شاخه‌های خانوادگی
+              گوناگونی شکل گرفت. او تا پایان عمر بر ادامه راه و حفظ پیوندهای
+              خانوادگی تأکید داشت.
+            </p>
+            <p>
+              او برای همه احترام قائل بود و در میان اطرافیان خود نیز مورد احترام بود.
+            </p>
+
+            <blockquote>
+              «همه می‌خواهند بزرگ باشند، اما بزرگی را افراد کمی به دست می‌گیرند.»
+            </blockquote>
+
+            <div class="memorial">یاد او گرامی باد</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- حاج رحیم -->
+    <section class="section elder-section rahim-section">
+      <div class="container">
+        <div class="section-heading">
+          <span>ادامه راه بزرگان</span>
+          <h2>حاج رحیم</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <article class="elder-card rahim-card">
+          <div class="elder-gallery single-image">
+            <img src="images/haji-rahim.jpg" alt="تصویر حاج رحیم">
+          </div>
+
+          <div class="elder-info">
+            <span class="elder-tag">از بزرگان بیت ارویض</span>
+            <h3>حاج رحیم</h3>
+            <p>
+              حاج رحیم برادر حاجی درویش بود. پس از درگذشت حاجی درویش،
+              ادامه‌دهنده راه و جایگاه او شد و برای خانواده تلاش کرد.
+            </p>
+            <p>
+              او با دشواری‌های فراوان روبه‌رو شد، اما در برابر مشکلات ایستادگی کرد.
+              مهربانی، بخشندگی و گذشت از ویژگی‌هایی بود که خانواده از او به یاد دارند.
+            </p>
+            <p>
+              زحمت‌ها و فداکاری‌های او برای خانواده فراموش‌شدنی نیست.
+              او برای تمام خانواده تلاش می‌کرد و در زرگان و بیت ارویض
+              مورد احترام بود.
+            </p>
+            <p>
+              حاج رحیم دارای ۶ پسر بود.
+            </p>
+
+            <div class="memorial">یادش گرامی باد</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- میراث -->
+    <section class="heritage-section" id="heritage">
+      <div class="container heritage-content">
+        <span>میراث نسل‌ها</span>
+        <h2>ریشه‌ها را بشناسیم و به آیندگان بسپاریم</h2>
+        <p>
+          حفظ نام بزرگان، ثبت خاطرات و نگهداری شجره‌نامه،
+          راهی برای پاسداشت هویت و پیوند نسل‌های یک خاندان است.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <span class="gold-label">میراث مشترک</span>
-      <h2>روایت امروز، یادگار فردا</h2>
-      <p>با ثبت خاطرات، عکس‌ها و نام بزرگان، تاریخ خانوادگی را برای نسل‌های آینده ماندگار کنیم.</p>
+      <div class="footer-logo">بیت ارویض</div>
+      <p>آرشیو خانوادگی و تاریخی بیت ارویض</p>
+      <span>با احترام به گذشتگان و نسل‌های آینده</span>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="container footer">
-    <strong>بیت ارویض | خاندان درستانی</strong>
-    <span>پاسداشت ریشه‌ها و پیوند نسل‌ها</span>
-    <span>© <span id="year"></span></span>
-  </div>
-</footer>
+  <button id="backToTop" class="back-to-top" aria-label="بازگشت به بالا">↑</button>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
